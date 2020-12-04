@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "3cbecbfe-dc0f-40e8-b7ab-0272119961db",
+		"name": "takehome",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create recipe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"incredible recipe\",\n    \"ingredients\": [\n        {\n            \"id\":1,\n            \"amount\":30,\n            \"unit\":\"grams\"\n        },\n        {\n            \"id\":4,\n            \"amount\":100,\n            \"unit\":\"grams\"\n        }\n    ],\n    \"price\":33.20,\n    \"cooking_time\":20,\n    \"cooking_difficulty\":\"easy\",\n    \"energy\":100,\n    \"fat_total\":2.4,\n    \"fat_saturates\":1.2,\n    \"carbohydrate_total\":10.2,\n    \"carbohydrate_sugars\":3.2,\n    \"fiber\":0,\n    \"protein\":1.2,\n    \"cholesterol\":0,\n    \"sodium\":3.5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/recipe/create?api_token=bc2328b61a0cc0bf9a8e920c40bddf3234d7bfb3c5c36568c61bab9d35539d1e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"recipe",
+						"create"
+					],
+					"query": [
+						{
+							"key": "api_token",
+							"value": "bc2328b61a0cc0bf9a8e920c40bddf3234d7bfb3c5c36568c61bab9d35539d1e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"user\",\n    \"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"register"
+					],
+					"query": [
+						{
+							"key": "api_token",
+							"value": "b47f1fdae51b627e7273cb252ce0cc39d9656f24825f0739a6807e02deb8b162",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create ingredient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"olive\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/ingredient/create?api_token=bc2328b61a0cc0bf9a8e920c40bddf3234d7bfb3c5c36568c61bab9d35539d1e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"ingredient",
+						"create"
+					],
+					"query": [
+						{
+							"key": "api_token",
+							"value": "bc2328b61a0cc0bf9a8e920c40bddf3234d7bfb3c5c36568c61bab9d35539d1e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/recipe/info/incredible%20recipe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/recipe/info/incredible%20recipe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"recipe",
+						"info",
+						"incredible%20recipe"
+					],
+					"query": [
+						{
+							"key": "api_token",
+							"value": "bc2328b61a0cc0bf9a8e920c40bddf3234d7bfb3c5c36568c61bab9d35539d1e",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/menu/create/?api_token=b47f1fdae51b627e7273cb252ce0cc39d9656f24825f0739a6807e02deb8b162",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"perfect menu\",\n    \"recipe_names\":[\"incredible recipe\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/menu/create?api_token=bc2328b61a0cc0bf9a8e920c40bddf3234d7bfb3c5c36568c61bab9d35539d1e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"menu",
+						"create"
+					],
+					"query": [
+						{
+							"key": "api_token",
+							"value": "bc2328b61a0cc0bf9a8e920c40bddf3234d7bfb3c5c36568c61bab9d35539d1e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/menu/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/menu/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"menu",
+						"list"
+					],
+					"query": [
+						{
+							"key": "api_token",
+							"value": "bc2328b61a0cc0bf9a8e920c40bddf3234d7bfb3c5c36568c61bab9d35539d1e",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
